@@ -885,7 +885,7 @@
                 <p class="metric"><strong>Result:</strong> HIL tests in Python and pytest on Typhoon HIL rigs, over CAN bus, check every change. I am building the fault handling, state machine, and mission profile work, checking what the system does when something goes wrong and how it moves between its states. End-of-line tests run on the Pack Manager and on the combiner box, also called the gateway EOL. I make sure EOL testing has full coverage, CT stays stable, and the tests are safe to run. I work with the firmware team, find field issues, and feed them back into testing. Bugs get caught in the lab.</p>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Pack Manager:</strong> the box that links used EV packs to a storage site and evens out their power. <strong>EOL:</strong> the final test before a unit ships. <strong>HIL:</strong> firmware tested on the hardware itself. <strong>Typhoon HIL:</strong> the rig that runs the real controller against a simulated battery system, so tests run on hardware without a live high-voltage setup. <strong>Fault handling:</strong> what the system does when something goes wrong, so it fails safely. <strong>State machine:</strong> the states a system can be in, like off, running, or fault, and the rules for moving between them. <strong>CAN bus:</strong> the network parts use to talk.</p>
+                  <p><strong>Pack Manager:</strong> A box that connects old car batteries so they can store power together. <strong>EOL:</strong> The last check before a product leaves the factory. <strong>HIL:</strong> Testing the software on the real machine parts. <strong>Typhoon HIL:</strong> A test setup that acts like a real battery, so testing is safe. <strong>Fault handling:</strong> How the system stays safe when something breaks. <strong>State machine:</strong> The modes a system can be in, like on, off, or broken, and how it switches. <strong>CAN bus:</strong> How the parts send messages to each other.</p>
                 </div>
                 <ul class="stack">
                   <li>Python</li><li>pytest</li><li>HIL testing</li><li>Typhoon HIL</li><li>CAN bus</li><li>Firmware validation</li><li>End-of-line test</li><li>CI/CD</li>
@@ -909,7 +909,7 @@
                 <p class="metric"><strong>Result:</strong> Controls Lead, from an empty site to a running line. 10+ axis EtherCAT, with vision, laser, and weight checks. One TwinCAT 3 library runs every axis. Data direct to the cloud, no middleware. First CI/CD pipeline for the PLC codebase.</p>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Battery sorting line:</strong> cameras spot each used battery's chemistry, then the line routes it to the right place. <strong>PLC:</strong> the computer that runs factory machines.</p>
+                  <p><strong>Battery sorting line:</strong> A line that checks what kind of battery each one is, then sends it to the right place. <strong>PLC:</strong> The computer that runs the factory machines.</p>
                 </div>
                 <ul class="stack">
                   <li>EtherCAT</li><li>TwinCAT 3</li><li>GitHub Actions</li><li>Self-hosted runners</li><li>Static analysis</li><li>REST / HTTP / JSON</li><li>Git</li>
@@ -947,7 +947,7 @@
                 </figure>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Row Level Security:</strong> each player sees only the data they are allowed to see. <strong>CI jobs:</strong> the automatic checks on every change.</p>
+                  <p><strong>Row Level Security:</strong> Each player can only see info they are allowed to see. <strong>CI jobs:</strong> Checks that run on their own every time the code changes.</p>
                 </div>
                 <ul class="stack">
                   <li>Next.js 14</li><li>TypeScript</li><li>Supabase Postgres</li><li>Row Level Security</li><li>GitHub Actions CI</li><li>Vercel</li>
@@ -971,7 +971,7 @@
                 <p class="metric"><strong>Result:</strong> defects 4% to 0.4%, scrap down $1.2M a year, ESD damage down $1M a year. Output doubled, availability 99%, first-pass yield up 3%, no added headcount. Ended as global expert for the TPAK fleet. Lines commissioned in Germany, Austin, China, and Nevada. As an intern, I built the Plaid inverter vision system end to end.</p>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Inverter:</strong> turns battery power into motor power. <strong>TPAK:</strong> the power switch module inside it. <strong>ESD:</strong> damage from static shocks.</p>
+                  <p><strong>Inverter:</strong> Changes battery power into power the motor can use. <strong>TPAK:</strong> A small power part inside the inverter. <strong>ESD:</strong> Damage from a tiny static shock, like the zap from a door handle.</p>
                 </div>
                 <ul class="stack">
                   <li>Drive Unit Inverter</li><li>TPAK</li><li>Machine vision</li><li>ESD controls</li><li>Commissioning</li>
@@ -995,7 +995,7 @@
                 <p class="metric"><strong>Result:</strong> every strategy gets a backtest with costs counted, plus lookahead and survivorship audits, checked against buy and hold. Paper trading only. Ideas that fail the audit get cut.</p>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Backtest:</strong> trying a trading idea on old prices. <strong>Paper trading:</strong> practice trades, no money moves.</p>
+                  <p><strong>Backtest:</strong> Trying a trading idea using old prices. <strong>Paper trading:</strong> Practice trading with fake money, so nothing real is lost.</p>
                 </div>
                 <ul class="stack">
                   <li>Python</li><li>Alpaca API</li><li>Backtesting</li><li>Paper trading</li><li>Risk controls</li><li>EOD reporting</li>
@@ -1162,7 +1162,7 @@
                 </ul>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Battery sorting line:</strong> cameras spot each battery's chemistry, and the line routes it to the right place.</p>
+                  <p><strong>Battery sorting line:</strong> A line that checks what kind of battery each one is, then sends it to the right place.</p>
                 </div>
               </div>
             </div>
@@ -1173,7 +1173,7 @@
                 <p class="brief">New facility lead, powder handling. Factory Acceptance Testing in China.</p>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Powder handling:</strong> equipment that moves dry battery material through a plant, in the right amounts.</p>
+                  <p><strong>Powder handling:</strong> Machines that move dry powder safely through the factory.</p>
                 </div>
               </div>
             </div>
@@ -1188,7 +1188,7 @@
                 </ul>
                 <div class="plain-thing">
                   <span class="plain-label">In plain English</span>
-                  <p><strong>Drive unit inverter:</strong> turns battery power into motor power. <strong>TPAK:</strong> the power switch module inside it. Photo is on the Tesla project card in Featured work.</p>
+                  <p><strong>Drive unit inverter:</strong> Changes battery power into power the motor can use. <strong>TPAK:</strong> A small power part inside it. The photo is on the Tesla card in Featured work.</p>
                 </div>
               </div>
             </div>
