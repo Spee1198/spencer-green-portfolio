@@ -778,8 +778,8 @@
           <div class="scan-card" aria-label="What I do">
             <div class="scan-head"><h3>What I do</h3></div>
             <div class="scan-grid">
-              <div><strong>Factory end-of-line testing</strong><p>I write end-of-line tests in Python and pytest for finished units: the Pack Manager and the combiner box. The Pack Manager sits at the core of Redwood's battery storage system, connecting EV battery packs so they can store power together. My tests run over CAN bus. I keep coverage full, CT stable, and every test safe to run, with a clear pass or fail on every unit. Field issues feed back into new tests, worked through with the firmware team.</p></div>
-              <div><strong>Firmware validation on HIL</strong><p>Firmware tests in Python and pytest on Typhoon HIL rigs, over CAN bus. I am building the fault handling, state machine, and mission profile work, and I work with the firmware team to turn issues found in the field into new tests.</p></div>
+              <div><strong>Factory end-of-line testing</strong><p>I write end-of-line tests in Python and pytest for finished units: the Pack Manager and the combiner box. The Pack Manager sits at the core of Redwood's battery storage system, connecting EV battery packs so they can store power together. My tests run over CAN bus and CAN FD. I keep coverage full, CT stable, and every test safe to run, with a clear pass or fail on every unit. Field issues feed back into new tests, worked through with the firmware team.</p></div>
+              <div><strong>Firmware validation on HIL</strong><p>Firmware tests in Python and pytest on Typhoon HIL rigs, over CAN bus and CAN FD. I am building the fault handling, state machine, and mission profile work, and I work with the firmware team to turn issues found in the field into new tests.</p></div>
             </div>
           </div>
           <div class="proof-lead">
@@ -788,7 +788,7 @@
           <dl class="proof-rows">
             <div class="proof-row"><dt>4% to 0.4%</dt><dd>Defects on the TPAK lines at Tesla, down to one tenth of where they started.</dd></div>
             <div class="proof-row"><dt>99% availability</dt><dd>The inverter lines held this while output doubled and first-pass yield rose 3%, with no added headcount.</dd></div>
-            <div class="proof-row"><dt>Company-wide</dt><dd>At Redwood I ran a platform study across 15+ categories. The pick I landed on was adopted company-wide in Dec 2025.</dd></div>
+            <div class="proof-row"><dt>Company-wide</dt><dd>At Redwood I compared 4 major vendors. We picked one, and it was adopted company-wide in Dec 2025.</dd></div>
           </dl>
         </section>
 
@@ -807,7 +807,7 @@
               <div class="proj-body">
                 <div class="meta"><span>Redwood Materials</span><span class="sep">/</span><span>Current role</span></div>
                 <h3>Firmware tests on hardware</h3>
-                <p class="metric"><strong>What I built:</strong> HIL tests in Python and pytest on Typhoon HIL rigs, over CAN bus, check every change. I am building the fault handling, state machine, and mission profile work, checking what the system does when something goes wrong and how it moves between its states. End-of-line tests run on the Pack Manager and on the combiner box. I make sure EOL testing has full coverage, CT stays stable, and the tests are safe to run. I work with the firmware team, find field issues, and feed them back into testing. Bugs get caught in the lab.</p>
+                <p class="metric"><strong>What I built:</strong> HIL tests in Python and pytest on Typhoon HIL rigs, over CAN bus and CAN FD, check every change. I am building the fault handling, state machine, and mission profile work, checking what the system does when something goes wrong and how it moves between its states. End-of-line tests run on the Pack Manager and on the combiner box. I make sure EOL testing has full coverage, CT stays stable, and the tests are safe to run. I work with the firmware team, find field issues, and feed them back into testing. Bugs get caught in the lab.</p>
                 <div class="plain-thing overview-glossary">
                   <span class="plain-label">Simple overview</span>
                   <dl>
@@ -817,11 +817,11 @@
                     <dt>Typhoon HIL</dt><dd>A test setup that acts like a real battery, so testing is safe.</dd>
                     <dt>Fault handling</dt><dd>How the system stays safe when something breaks.</dd>
                     <dt>State machine</dt><dd>The modes a system can be in, like on, off, or broken, and how it switches.</dd>
-                    <dt>CAN bus</dt><dd>How the parts send messages to each other.</dd>
+                    <dt>CAN bus and CAN FD</dt><dd>How the parts send messages to each other. CAN FD is the newer, faster version.</dd>
                   </dl>
                 </div>
                 <ul class="stack">
-                  <li>Python</li><li>pytest</li><li>HIL testing</li><li>Typhoon HIL</li><li>CAN bus</li><li>Firmware validation</li><li>End-of-line test</li><li>CI/CD</li>
+                  <li>Python</li><li>pytest</li><li>HIL testing</li><li>Typhoon HIL</li><li>CAN bus</li><li>CAN FD</li><li>Firmware validation</li><li>End-of-line test</li><li>CI/CD</li>
                 </ul>
                 <div class="more-row">
                   <button class="btn small" type="button" data-open-case="case-hil">Case study
@@ -1003,7 +1003,7 @@
                 <li>End-of-line tests on the Pack Manager and the combiner box</li>
                 <li>Fault handling, state machine, and mission profile work</li>
                 <li>Firmware validation</li>
-                <li class="plain">CAN bus, the network my tests run over, and Modbus</li>
+                <li class="plain">CAN bus and CAN FD, the networks my tests run over, and Modbus</li>
                 <li>Git</li>
               </ul>
             </div>
@@ -1019,7 +1019,7 @@
                 <li>Power electronics, servo and motion control, 2D and 3D vision</li>
               </ul>
               <div class="skill-chips" aria-label="Earlier work tools and protocols">
-                <span>CAN bus</span><span>EtherCAT</span><span>Modbus</span><span>Profinet</span><span>EtherNet/IP</span><span>OPC UA</span><span>MQTT</span><span>Beckhoff TwinCAT</span><span>Siemens TIA Portal</span><span>Ignition</span>
+                <span>CAN bus</span><span>CAN FD</span><span>EtherCAT</span><span>Modbus</span><span>Profinet</span><span>EtherNet/IP</span><span>OPC UA</span><span>MQTT</span><span>Beckhoff TwinCAT</span><span>Siemens TIA Portal</span><span>Ignition</span>
               </div>
             </div>
           </div>
@@ -1042,7 +1042,7 @@
                 </ul>
                 <p class="brief">Firmware validation on HIL</p>
                 <ul>
-                  <li>HIL tests in Python and pytest on Typhoon HIL rigs, over CAN bus, Battery Energy Storage team.</li>
+                  <li>HIL tests in Python and pytest on Typhoon HIL rigs, over CAN bus and CAN FD, Battery Energy Storage team.</li>
                   <li>Building the fault handling, state machine, and mission profile work on the HIL rigs.</li>
                   <li>I work with the firmware team. Field issues become new tests.</li>
                 </ul>
@@ -1055,7 +1055,7 @@
                 <ul>
                   <li>Controls Lead on the battery sorting line, built from nothing. 10+ axis EtherCAT, vision, laser, and weight checks.</li>
                   <li>First CI/CD pipeline for the PLC codebase.</li>
-                  <li>Platform study, 15+ categories. My pick adopted company-wide, Dec 2025.</li>
+                  <li>Platform study, 4 major vendors. We picked one, adopted company-wide, Dec 2025.</li>
                 </ul>
                 <div class="plain-thing overview-inline">
                   <span class="plain-label">Simple overview</span>
@@ -1151,7 +1151,7 @@
         <div class="case-sec">
           <h4>What I built</h4>
           <ul>
-            <li>Python and pytest tests that run firmware on Typhoon HIL rigs, over CAN bus.</li>
+            <li>Python and pytest tests that run firmware on Typhoon HIL rigs, over CAN bus and CAN FD.</li>
             <li>EOL and HIL testing on the Pack Manager.</li>
             <li>EOL and HIL testing on the combiner box.</li>
             <li>Full coverage on EOL testing, CT kept stable, and tests that are safe to run.</li>
@@ -1197,7 +1197,7 @@
         </div>
         <div class="case-sec">
           <h4>Also at Redwood</h4>
-          <p>Platform study, 15+ categories, presented through the CTO. My pick was adopted company-wide in Dec 2025.</p>
+          <p>Platform study, 4 major vendors, presented through the CTO. We picked one, and it was adopted company-wide in Dec 2025.</p>
         </div>
         <div class="case-outcome">
           <p><strong>Result:</strong> a working line that grew to a second lane. Code checked on every change.</p>
