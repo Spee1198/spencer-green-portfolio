@@ -409,6 +409,12 @@
         padding: 4px 10px; border-radius: 999px;
       }
       .more-row { margin-top: 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+      /* Labeled bullet lists inside a project card: What I built / What I did. */
+      .proj-points { margin-top: 16px; }
+      .proj-points .points-label { font-size: 13px; font-weight: 700; color: var(--ink); display: block; margin-bottom: 6px; }
+      .proj-points ul { margin: 0; padding: 0; list-style: none; }
+      .proj-points ul li { position: relative; padding: 3px 0 3px 20px; font-size: 15px; line-height: 1.55; }
+      .proj-points ul li::before { content: ""; position: absolute; left: 1px; top: 12px; width: 6px; height: 6px; border-radius: 2px; background: var(--accent); }
       /* Redwood diagram: lives inside the current role card, condensed and
          centered, image and caption both clickable to Redwood. */
       .product-figure { margin: 16px auto 0; background: var(--surface); border: 1.5px solid var(--border-strong); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); width: 100%; max-width: 560px; }
@@ -440,6 +446,8 @@
       .proj-figure { margin: 14px 0 0; }
       .proj-figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); }
       .proj-figure figcaption { margin-top: 7px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+      /* Photo credit caption at the top of a lead card body, under its image. */
+      .proj .photo-credit { margin: 0 0 14px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
       /* PaddlePost demo video: click to play, native controls, no autoplay. */
       .proj-video { margin: 16px 0 0; }
       .proj-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid var(--border); background: #000; }
@@ -833,6 +841,47 @@
 
             <article class="proj proj--lead">
               <div class="proj-media">
+                <a href="https://www.recyclingtoday.com/news/redwood-materials-builds-battery-sorting-line-with-vision-system/" target="_blank" rel="noopener" aria-label="Battery sorting line vision system">
+                  <img src="assets/redwood-battery-sorting.jpg" alt="Vision system on the battery sorting line: a camera and light bar over a conveyor belt, reading a battery as it passes" width="948" height="533" loading="eager" decoding="async" />
+                </a>
+              </div>
+              <div class="proj-body">
+                <div class="meta"><span>Redwood Materials</span><span class="sep">/</span><span>Controls lead</span></div>
+                <h3>A battery sorting line, built from nothing</h3>
+                <p><strong>I built the whole thing:</strong> Redwood had no battery sorting line and no prior version to start from.</p>
+                <div class="proj-points">
+                  <span class="points-label">What I built</span>
+                  <ul>
+                    <li>A new line that sorts batteries by chemistry, built from nothing.</li>
+                    <li>10+ axis EtherCAT motion with vision, laser profilometry, and inline weight checks.</li>
+                    <li>One reusable TwinCAT 3 motion library that runs every axis.</li>
+                    <li>A data path from device to cloud: Beckhoff TF6760 HTTP POST direct from the controller, no middleware.</li>
+                    <li>A second sorting lane, with an Ignition Perspective HMI across both lanes.</li>
+                  </ul>
+                </div>
+                <div class="proj-points">
+                  <span class="points-label">What I did</span>
+                  <ul>
+                    <li>Owned controls from an empty site to a running line.</li>
+                    <li>First CI/CD pipeline for the PLC codebase: GitHub Actions, self-hosted Windows runners, automated static analysis.</li>
+                  </ul>
+                </div>
+                <div class="plain-thing overview-inline">
+                  <p>Simple overview: the line checks what kind of battery each one is, then sends it to the right place. The PLC is the computer that runs the factory machines.</p>
+                </div>
+                <ul class="stack">
+                  <li>EtherCAT</li><li>TwinCAT 3</li><li>Ignition Perspective</li><li>GitHub Actions</li><li>Self-hosted runners</li><li>REST / HTTP / JSON</li><li>Git</li>
+                </ul>
+                <div class="more-row">
+                  <button class="btn small" type="button" data-open-case="case-cicd">Case study
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj proj--lead">
+              <div class="proj-media">
                 <a href="https://paddlepost.vercel.app" target="_blank" rel="noopener" aria-label="PaddlePost live app">
                   <img src="assets/paddlepost-hero.jpg" alt="Screenshot of the PaddlePost app main page: Play Better. Track Everything." width="2560" height="1260" loading="eager" decoding="async" />
                 </a>
@@ -890,29 +939,6 @@
                 </ul>
                 <div class="more-row">
                   <button class="btn small" type="button" data-open-case="case-tesla">Case study
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="proj proj--lead">
-              <div class="proj-media">
-                <img src="assets/consumer-batteries.jpg" alt="Clean product photo of new consumer batteries of different chemistries on a white background: a lithium-ion pouch cell, yellow Ni-Cd AA cells, green Ni-MH AA cells, alkaline AA cells, a sealed block battery, and a lithium coin cell, the mix of chemistries the sorting line sorts" width="1199" height="747" loading="eager" decoding="async" />
-              </div>
-              <div class="proj-body">
-                <div class="meta"><span>Redwood Materials</span><span class="sep">/</span><span>Controls lead</span></div>
-                <h3>A battery sorting line, built from nothing</h3>
-                <p><strong>Starting point:</strong> Redwood had no line that could sort batteries by chemistry. No prior version existed.</p>
-                <p class="metric"><strong>How it turned out:</strong> Controls Lead, from an empty site to a running line. 10+ axis EtherCAT, with vision, laser, and weight checks. One TwinCAT 3 library runs every axis. Data direct to the cloud, no middleware. First CI/CD pipeline for the PLC codebase.</p>
-                <div class="plain-thing overview-inline">
-                  <p>Simple overview: the line checks what kind of battery each one is, then sends it to the right place. The PLC is the computer that runs the factory machines.</p>
-                </div>
-                <ul class="stack">
-                  <li>EtherCAT</li><li>TwinCAT 3</li><li>GitHub Actions</li><li>Self-hosted runners</li><li>REST / HTTP / JSON</li><li>Git</li>
-                </ul>
-                <div class="more-row">
-                  <button class="btn small" type="button" data-open-case="case-cicd">Case study
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </button>
                 </div>
@@ -1183,21 +1209,24 @@
         </div>
         <div class="case-sec">
           <h4>The problem</h4>
-          <p>Redwood had no line that could sort batteries by chemistry. No prior version existed.</p>
+          <p>Redwood had no line that could sort batteries by chemistry. No prior version existed. I built the sorting line from the beginning and owned controls for the whole thing.</p>
         </div>
         <div class="case-sec">
           <h4>What I built</h4>
           <ul>
-            <li>Controls Lead, from an empty site: 10+ axis EtherCAT, vision, laser, weight checks.</li>
-            <li>One TwinCAT 3 motion library runs every axis.</li>
-            <li>Data direct from controller to cloud, Beckhoff TF6760. No middleware.</li>
-            <li>First CI/CD pipeline for the PLC codebase. GitHub Actions, self-hosted runners.</li>
-            <li>Cognex camera checks, taught and tested on a set of 200+ images. Mentored an intern.</li>
+            <li>A new battery chemistry sorting line, built from nothing. No prior version existed.</li>
+            <li>10+ axis EtherCAT motion with vision, laser profilometry, and inline weight checks.</li>
+            <li>One reusable TwinCAT 3 motion library runs every axis.</li>
+            <li>Data path from device to cloud: Beckhoff TF6760 HTTP POST direct from the controller. No middleware.</li>
+            <li>A second sorting lane, with an Ignition Perspective HMI across both lanes.</li>
           </ul>
         </div>
         <div class="case-sec">
-          <h4>Also at Redwood</h4>
-          <p>Platform study, 4 major vendors, presented through the CTO. We picked one, and it was adopted company-wide in Dec 2025.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Owned controls from an empty site to a running line.</li>
+            <li>First CI/CD pipeline for the PLC codebase: GitHub Actions, self-hosted Windows runners, automated static analysis.</li>
+          </ul>
         </div>
         <div class="case-outcome">
           <p><strong>Result:</strong> a working line that grew to a second lane. Code checked on every change.</p>
